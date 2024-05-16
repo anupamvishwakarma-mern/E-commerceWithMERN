@@ -1,0 +1,253 @@
+.address{
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 100px;
+}
+
+.address .container{
+  width: 100%;
+  height: auto;
+}
+
+.address .left_card{
+  width: 100%;
+  border: 1px solid lightgray;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.address .left_card form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.address .left_card form .city_state{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.address .left_card form input{
+  margin: 10px 0;
+  font-size: 14px;
+  padding: 8px 10px;
+}
+
+.address .left_card form input::placeholder{
+  font-size: 12px;
+}
+
+.address .left_card form h6{
+  font-size: 13px;
+}
+
+.address .save_as div{
+  display: flex;
+  gap: 10px;
+}
+
+.address .save_as div span{
+  border: 1px solid gray;
+  border-radius: 30px;
+  padding: 5px 15px;
+  font-size: 13px;
+}
+
+.save_as div span.default{
+  color: #ff5a5a;
+  border-color: #ff5a5a;
+}
+
+.address .form-check{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 0;
+}
+.address .form-check label{
+  font-size: 13px;
+}
+
+.right_card button,
+.add_address button{
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #ff5a5a;
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.right_card{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.right_card h6{
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #ff5a5a;
+}
+
+.right_card .amount{
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.address .left_address{
+  width: 100%;
+}
+
+.address .left_address .top_section{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.address .left_address .top_section .modal-btn{
+  border: 1px solid gray;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(54, 54, 54);
+}
+
+.address .bottom_section h6{
+  font-size: 14px;
+  color: rgb(63, 62, 62);
+  margin-bottom: 15px;
+}
+
+.address .bottom_section .address_card{
+  box-shadow: 0 0px 5px rgba(0,0,0,0.5);
+  padding: 20px 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.address .bottom_section .address_card .address-one{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: start;
+  padding-bottom: 15px;
+  border-bottom: 1px dotted lightgray;
+}
+
+.address .bottom_section .address_card .address-one:last-child{
+  border-bottom: none;
+}
+
+.address_card .address-one .address-right{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.address_card .address-one input[type="radio" i] {
+  accent-color: #ff5a5a;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.address-one .address-right .name{
+  display: flex;
+  justify-content: space-between; 
+}
+.address-one .address-right .name h6{
+  font-size: 14px;
+  color: #000;
+  font-weight: 500;
+}
+
+.address-right .name .dropdown-toggle::after{
+  display: none;
+}
+.dropdown-menu{
+  --bs-dropdown-min-width: 4rem;
+}
+
+.dropdown-menu li a{
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.address-right .add_one{
+  font-size: 13px;
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+}
+
+.address-right .mobile{
+  font-size: 13px;
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+}
+
+.address-right .mobile span{
+  color: #000;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.no-address{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  gap: 20px;
+}
+
+.no-address img{
+  width: 100px;
+}
+
+.no-address span{
+  font-size: 17px;
+  font-weight: 600;
+  color: #000;
+}
+
+.no-address .span{
+  color: #ff5a5a;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.right_card .delivery-add span{
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(102, 102, 102);
+  text-transform: capitalize;
+}
+
+.right_card .delivery-add{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

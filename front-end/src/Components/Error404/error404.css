@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Inter:wght@100..900&family=Jersey+25&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.error-404{
+  margin: 80px 0;
+  font-family: "Rubik", sans-serif;
+}
+
+.error-404 .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-404 .container .left-box{
+  width: 70%;
+}
+.error-404 .left-box h1{
+  font-size: 50px;
+  color: brown;
+}
+.error-404 .left-box p{
+  font-size: 16px;
+  font-weight: 600;
+}
+.error-404 .left-box p a{
+  text-decoration: none;
+}
+
+.error-404 .container .right-box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-404 .right-box img{
+  width: 50%;
+}
+
+@media (max-width: 768px){
+  .error-404 .container .left-box{
+    width: 100%;
+  }
+  .error-404{
+    margin-top: 130px;
+  }
+  .error-404 .left-box h1{
+    font-size: 22px;
+  }  
+  .error-404 .left-box p{
+    font-size: 12px;
+  }
+  .error-404 .right-box img {
+    width: 85%;
+}
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+  .error-404 .left-box h1 {
+    font-size: 40px;
+}
+}

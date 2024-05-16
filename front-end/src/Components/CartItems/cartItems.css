@@ -1,0 +1,132 @@
+.cartitems{
+  margin-top: 100px;
+}
+.cartitems hr{
+  height: 3px;
+  border: 0;
+  background-color: #e2e2e2;
+  margin: 0;
+}
+.cartitems-format-main{
+  display: grid;
+  grid-template-columns: 0.5fr 2.5fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 0px;
+  color: #454545;
+  font-size: 18px;
+  font-weight: 600;
+}
+.cartitems-format{
+  font-size: 17px;
+  font-weight: 500;
+}
+.cartitems-product-icon{
+  height: 62px;
+}
+.cartitems-remove-icon{
+  width: 15px;
+  margin: 0px 40px;
+  cursor: pointer;
+}
+.cartitems-quantity{
+  width: 64px;
+  height: 30px;
+  border: 2px solid #ebebeb;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.cartitems-down{
+  display: flex;
+  margin: 100px 0px;
+}
+.cartitems-total{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.cartitems-total-item{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px 0 0;
+}
+.cartitems-total button{
+  outline: none;
+  border: none;
+  background-color: #ff5a5a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 0;
+}
+.cartitems-promocode{
+  font-size: 16px;
+  font-weight: 500;
+}
+.cartitems-promocode p{
+  color: #555;
+}
+.cartitems-promobox{
+  width: fit-content;
+  margin-top: 15px;
+  padding-left: 20px;
+  background-color: #eaeaea;
+}
+.cartitems-promobox input{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 10px;
+}
+.cartitems-promobox button{
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 9px 30px;
+}
+
+.cartitems tr td{
+  font-size: 13px;
+}
+
+a{
+  text-decoration: none;
+  color: #454545;
+}
+
+@media screen and (max-width: 992px) and (min-width: 767px) {
+  .cartitems .container{
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cartitems .container{
+    max-width: 100%;
+  }
+  .cartitems-down{
+    gap: 30px;
+  }
+  .cartitems-promobox{
+    width: 100%;
+  }
+  .cartitems-promobox input{
+    width: 70%;
+  }
+  .cartitems-promobox button{
+    width: 30%;
+    padding: 9px 10px;
+  }
+  .cartitems{
+    margin-top: 150px;
+  }
+  .cartitems-format-main{
+    font-size: 14px;
+  }
+
+}
+

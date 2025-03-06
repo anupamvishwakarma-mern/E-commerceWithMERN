@@ -4,13 +4,14 @@ import { useCustom } from "../../Context/ShopContext";
 import remove_icon from "../Assets/cart_cross_icon.png";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import all_product from "../Assets/all_product";
 
 
 export const CartItems = () => {
 
   const { cartItems, setCartItems } = useCustom()
   const navigate = useNavigate()
-  const products = JSON.parse(localStorage.getItem('data'))
+  const products = all_product;
   const user = JSON.parse(localStorage.getItem('user'))
   
   useEffect(() => {

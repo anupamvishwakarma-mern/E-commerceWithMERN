@@ -78,7 +78,7 @@ export const Navbar = () => {
           <img src={cart_icon} alt="" />
         </Link>
         <div className="nav-cart-count">
-          { cartItems.product ? cartItems.product.length : ''}
+          { cartItems?.product ? cartItems?.product?.length : ''}
         </div>
       </div>
     </div>

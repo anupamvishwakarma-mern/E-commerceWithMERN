@@ -1,40 +1,42 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import all_product from '../Components/Assets/all_product'
+import all_product from "../Components/Assets/all_product";
 import axios from "axios";
 
-
-export const ShopContext = createContext(null)
+export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {
-
-  const shopperData = JSON.parse(localStorage.getItem('data'))
-  const user = JSON.parse(localStorage.getItem('user'))
+  // const shopperData =
+  //   localStorage.getItem("data") && JSON.parse(localStorage.getItem("data"));
+  const user =
+    localStorage.getItem("user") && JSON.parse(localStorage.getItem("user"));
 
   const getDefaultCart = () => {
-    if (shopperData) {
+    if (all_product) {
       let cart = {};
-      for (let i = 0; i < shopperData.length + 1; i++) {
-        cart[i] = 0
+      for (let i = 0; i < all_product.length + 1; i++) {
+        cart[i] = 0;
       }
-      return cart
+      return cart;
     }
-  }
+  };
 
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
   const getCartData = async () => {
     try {
-      const response = await axios.get(`http://localhost:8005/shopper/cart/get/${user._id}`)
-  
-      setCartItems(response?.data?.cart)
+      const response = await axios.get(
+        `http://localhost:8005/shopper/cart/get/${user._id}`
+      );
+
+      setCartItems(response?.data?.cart);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
-  
-    useEffect(() => {
-      getCartData();
-    },[])
+  };
+
+  useEffect(() => {
+    getCartData();
+  }, []);
 
   // const getTotalCartAmount = () => {
   //   let totalAmount = 0
@@ -57,18 +59,17 @@ const ShopContextProvider = (props) => {
   //   return totalItem
   // }
 
-
-  const contextValue = { all_product, cartItems,setCartItems }
+  const contextValue = { all_product, cartItems, setCartItems };
 
   return (
     <ShopContext.Provider value={contextValue}>
       {props.children}
     </ShopContext.Provider>
-  )
-}
+  );
+};
 
 export const useCustom = () => {
   return useContext(ShopContext);
-}
+};
 
-export default ShopContextProvider
+export default ShopContextProvider;

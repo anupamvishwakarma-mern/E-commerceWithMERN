@@ -11,9 +11,9 @@ export const ProductDisplay = (props) => {
 
   const { cartItems,setCartItems } = useCustom();
   const { product } = props
-  const images = product.images.split(',')
+  const images = product.image
   const navigate = useNavigate()
-  const [img, setImg] = useState(images[0]);
+  const [img, setImg] = useState(images);
   const [userData, setUserData] = useState();
 
   useEffect(() => {
@@ -39,11 +39,11 @@ export const ProductDisplay = (props) => {
     <div className="productdisplay row">
       <div className="productdisplay-left col-12 col-md-6">
         <div className="productdisplay-img-list">
-          {images.map((img, i) => {
-            return (
-              <img src={img} alt="product" key={i} onClick={() => setImage(img)} />
-            )
-          })}
+          {/* {images.map((img, i) => {
+            return ( */}
+              <img src={images} alt="product" onClick={() => setImage(img)} />
+            {/* )
+          })} */}
         </div>
         <div className="productdisplay-img">
           <img src={img} className="productdisplay-main-img" alt="show img" />
